@@ -1,0 +1,7 @@
+src/components
+src/layouts
+src/utils
+src/routes
+src/store
+src/assets
+themeConfig.js

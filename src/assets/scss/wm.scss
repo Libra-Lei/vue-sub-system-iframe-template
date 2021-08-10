@@ -1,0 +1,231 @@
+/** 修复最近班火狐浏览器的bug， 日历的 */
+.cv-wrapper{
+  .cv-day-number {
+    height: 1px;
+  }
+}
+
+// 重写 sidebar 
+.vs-sidebar--background {
+  z-index: 40001;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+// hover: 主题色背景
+.wm-hover-primary {
+  &:hover {
+    background-color: rgba(var(--vs-primary), .08);
+    color: rgba(var(--vs-primary), 1);
+  }
+}
+.ly-dropdown, .ly-tree-select, .father-asset-select {
+  input {
+    pointer-events: none;
+  }
+}
+.wm-vs-select-no-border {
+  .vs__dropdown-toggle {
+    border: none;
+  }
+}
+.wm-d-theme-vs-select-dark-bg {
+  .vs__dropdown-toggle {
+    background: #fff;
+  }
+}
+.wm-vs-select-shadow-drop {
+  .vs__dropdown-toggle {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    padding: 2px 0 5px 0;
+  }
+}
+
+.wm-d-theme-btn-dark-bg {
+  background: #fff!important;
+  color: #626262!important;
+  &:hover {
+    color: rgba(var(--vs-primary), 1)!important;
+  }
+}
+.wm-btn-shadow {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+}
+
+.theme-dark {
+  .wm-d-theme-vs-select-dark-bg {
+    .vs__dropdown-toggle {
+      background: #10163a;
+    }
+  }
+  .wm-d-theme-btn-dark-bg {
+    background: #10163a!important;
+    color: #fff!important;
+    &:hover {
+      color: rgba(var(--vs-primary), 1)!important;
+    }
+  }
+}
+
+/** 自定义深色按钮样式 */
+.theme-dark
+.wm-btn-tabs {
+  &.vs-button {
+    background: #10163a !important;
+    border: none;
+    color: #fff;
+    &.is-active {
+      color: rgba(var(--vs-primary),1);
+    }
+  }
+
+  &.wm-btn-no-foucus-bg {
+    &>span {
+      &:first-child {
+        width: 0!important;
+        height: 0!important;
+      }
+    }
+    &.isActive .vs-button--text, &.isActive .vs-button--icon {
+      color: #b5b0b0!important;
+    }
+  }
+}
+
+
+// 动画
+.wm-hover-up {
+  &:hover {
+    transform: translateY(-4px);
+    transition: all 0.2s;
+  }
+}
+
+// 背景
+.wm-theme-dark-bg {
+  background-color: #eaebef!important;
+}
+.theme-dark {
+  .wm-theme-dark-bg {
+    background-color: #262d49!important;
+  }
+}
+.wm-theme-primary-bg {
+  background-color: rgba(var(--vs-primary), .5)!important;
+}
+
+/** v-select 样式重写  start **/
+.v-select {
+  input {
+    background: transparent;
+  }
+  &.vs--disabled .vs__open-indicator {
+    background-color: #f8f8f8;
+  }
+}
+.theme-dark {
+  .v-select {
+    &.vs--disabled {
+      .vs__open-indicator {
+        background-color: #262c49;
+      }
+      .vs__dropdown-toggle {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+.theme-dark
+.wm-vs-select-dark-bg .vs__dropdown-toggle{
+  background: #10163a!important;
+  .vs__selected-options .vs__selected {
+    background: #262c49;
+  }
+}
+/** v-select 样式重写  end **/
+
+/** vs-input 样式重写  start **/
+.vs-input {
+  .vs-input--placeholder {
+    &.normal {
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+    }
+    &.large {
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+  .vs-input--input.hasIcon+.vs-input--placeholder {
+    &.normal {
+      padding-left: 3rem!important;
+    }
+    &.large {
+      padding-left: 3rem!important;
+    }
+  }
+}
+.theme-dark {
+  .vs-input {
+    input {
+      background: #262c49;
+    }
+    &.wm-input-dark-bg {
+      input {
+        background: #10163a;
+      }
+    }
+  }
+}
+/** vs-input 样式重写  end **/
+
+/** vuejs-datepicker 样式重写  start **/
+.vdp-datepicker
+.vdp-datepicker__calendar {
+  z-index: 4000;
+}
+.theme-dark {
+  .vdp-datepicker {
+    input {
+      background: #262c49;
+    }
+    &.wm-datepicker-dark-bg {
+      input {
+        background: #10163a;
+      }
+    }
+  }
+}
+/** vuejs-datepicker 样式重写  end **/
+
+/** vee-validate 验证样式 */
+.wm-vee-validate-error {
+  color: rgba(var(--vs-danger),1);
+  padding: 2px 4px;
+}
+
+/** datepicker 样式 */
+.wm-vdp-datepicker-fixed {
+  &.vdp-datepicker {
+    .vdp-datepicker__calendar {
+      position: fixed;
+    }
+  }
+}
+
+/** vs-select */
+.vs__clear, .vs__search {
+  background-color: transparent!important;
+}
+
+/** 必填项 提示符号 “*” */
+.wm-required {
+  &::before {
+    content: "*";
+    color: red;
+    margin-right: 4px;
+  }
+}
